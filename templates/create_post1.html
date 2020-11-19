@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+	<form method="POST" action="">
+		
+		
+			<h1> {{ legend }}</h1>
+
+		
+			{{ form.title.label() }}
+			{{ form.title() }}
+	
+<br>
+	<h2>
+			{{ form.content.label(class="form-control-label") }}
+			{{ form.content(class="form-control form-control-lg") }}
+
+	</h2><br>
+		   	{{ form.submit(class="btn btn-outline-info") }}
+		
+	</form>
+</div>
+
+
+{% endblock content %}

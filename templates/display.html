@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class= "content-section">
+	{% for post in posts %}
+
+<article class="media content-section">
+
+	<div class= "media-body">
+
+<div class="article-metadata">
+	
+	<small class="text-muted"> {{ post.date1 }}     </small>
+</div>
+
+	<h2>{{ post.blogtitle }}</h2>
+
+  <p class="article content">{{ post.blogtext }} </p>
+  </div>
+ </article>
+ {% endfor %}
+
+ {% endblock %}
