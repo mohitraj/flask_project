@@ -16,9 +16,13 @@ class blog_details13(db.Model):
 	blogcontent = db.Column(db.String(500), nullable=False )
 	date1 = db.Column(db.DateTime, nullable=False, default= datetime.utcnow )
 
-	def __init__(self, blogtitle, blogcontent):
+	def __init__(self, blogtitle, blogcontent, ):
 		self.blogtitle= blogtitle
 		self.blogcontent = blogcontent
+		#self.date1 = date1
+
+	def __repr__(self):
+		return f"({self.blogtitle}, {self.blogcontent})"
 
 
 if __name__ =='__main__':
